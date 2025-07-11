@@ -1,0 +1,46 @@
+html {
+  background-color: rgb(185, 253, 253);
+}
+main {
+  display: flex;
+  flex-direction: column;
+}
+.hero {
+  display: flex;
+}
+.left {
+  display: flex;
+  flex-direction: column;
+  border: 3px solid black;
+  padding: 2px;
+  width: 40%;
+}
+.left > .title {
+  font-size: 12px;
+}
+.left > .maintext {
+  font-size: 30px;
+  font-weight: bolder;
+}
+.buttons1 {
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+  align-items: center;
+}
+.right {
+  display: flex;
+  flex-direction: column;
+  border: 3px solid black;
+  width: 60%;
+  align-items: center;
+}
+.right > .mainav {
+  display: flex;
+  list-style-type: none;
+  gap: 6px;
+  align-items: center;
+  flex-basis: 50%;
+}
