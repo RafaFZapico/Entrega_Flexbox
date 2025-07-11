@@ -1,4 +1,4 @@
-html {
+body {
   background-color: rgb(185, 253, 253);
 }
 main {
@@ -17,6 +17,7 @@ main {
 }
 .left > .title {
   font-size: 12px;
+  /* padding: -20px; */
 }
 .left > .maintext {
   font-size: 30px;
@@ -30,17 +31,59 @@ main {
   width: 100%;
   align-items: center;
 }
+/* bloque derecho del hero */
 .right {
   display: flex;
   flex-direction: column;
   border: 3px solid black;
   width: 60%;
   align-items: center;
+  padding-bottom: 30px;
+  padding-left: 70px;
 }
 .right > .mainav {
+  border: 3px solid black;
+  height: 30px;
+  width: 70%;
   display: flex;
   list-style-type: none;
-  gap: 6px;
+  gap: 10px;
   align-items: center;
-  flex-basis: 50%;
+  justify-content: space-evenly;
+}
+.right > img {
+  /* imagen oficina */
+  width: 80%;
+  /* flex-grow: 2;
+  flex-shrink: 2; */
+}
+.right > .mainav .menu {
+  border: 1px solid rgb(238, 9, 9);
+  display: none;
+  /* width: 100%; */
+  /* display: none; */
+}
+
+.sections {
+  margin: 20px;
+}
+.sections > .firstsection {
+  display: flex;
+  flex-direction: column;
+}
+.sections > .firstsection > .faq {
+  display: flex;
+  gap: 20px;
+}
+.sections > .secondsection {
+  margin-top: 40px;
+}
+.sections > .secondsection > .buttons2 {
+  display: flex;
+  gap: 20px;
+}
+@media (max-width: 800px) {
+  .right > .mainav {
+    display: none;
+  }
 }
