@@ -1,43 +1,71 @@
+/* Ejercicio Ejercicio flexbox */
+:root {
+  --h2size: clamp(1.2em, 3vw, 4em);
+  --psize: clamp(1em, 2.5vw, 4em);
+}
 body {
   background-color: rgb(185, 253, 253);
-  width: 95%;
+  font-size: 20px;
+}
+.maincontainer {
+  /* contiene el <header> el <main> y el <footer>  */
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  flex-shrink: 1;
 }
 main {
+  /* contiene el hero, trusted, branding, custom, opinions. */
   display: flex;
   flex-direction: column;
 }
 .hero {
+  flex-grow: 1;
+  flex-shrink: 1;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 /* Bloque izquierdo del hero */
 .left {
+  flex-grow: 1;
+  flex-shrink: 1;
   display: flex;
   flex-direction: column;
-  /* border: 3px solid black; */
-  padding: 2px;
-  width: 40%;
+  padding: 20px;
+  width: 30%;
 }
 .left > .title {
-  font-size: 12px;
+  /* Digital Agency */
+  font-size: clamp(1em, 2vw, 5em);
 }
 .left > .maintext {
-  font-size: 30px;
+  /*  Building Digital Products, Brands & Experience */
+  font-size: clamp(1.2em, 3vw, 5em);
   font-weight: bolder;
 }
-.buttons1 {
-  padding-top: 10px;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  width: 100%;
-  align-items: center;
+.left > .secondarytext {
+  /* Digital Agency Is Your Online Team Mangement Tool That Easy And Promt */
+  font-size: clamp(1em, 2.5vw, 4em);
+}
+button {
+  width: 35%;
+  height: 10%;
+  border-radius: 10px;
+  background-color: rgba(86, 163, 251, 0.93);
+  color: white;
+  text-transform: uppercase;
+  font-size: clamp(5px, 2.2vw, 4em);
+}
+button:hover {
+  cursor: pointer;
 }
 /* bloque derecho del hero */
 .right {
+  /* Contiene navegación, anavegación img oficina.png */
   display: flex;
   flex-direction: column;
-  /* border: 3px solid black; */
-  width: 70%;
+  max-width: 700px;
   align-items: center;
   padding-bottom: 30px;
   padding: 8%;
@@ -56,30 +84,38 @@ main {
 }
 .right > img {
   /* imagen oficina */
-  width: 80%;
+  width: 110%;
+  min-height: 265px;
 }
 .right > .navegacion > .anavegacion > .menu {
-  /* border: 1px solid rgb(238, 9, 9); */
   display: none;
 }
-
-.sections {
-  margin: 20px;
-}
-.sections > .firstsection {
+.trusted {
+  width: 90%;
+  margin: auto;
+  height: 110%;
   display: flex;
   flex-direction: column;
+  padding: 10px;
+  flex-grow: 1;
+  flex-shrink: 1;
 }
-.sections > .firstsection > .faq {
+.trustext {
+  margin: 20px auto;
+}
+.logocontainer {
   display: flex;
-  gap: 20px;
+  height: 80%;
+  margin: auto;
+  background-color: rgb(203, 201, 201);
+  border-radius: 10px;
+  width: 80%;
 }
-.sections > .secondsection {
-  margin-top: 40px;
-}
-.sections > .secondsection > .buttons2 {
-  display: flex;
-  gap: 20px;
+.imglog {
+  border-radius: 10px;
+  width: 14%;
+  margin: 2% auto;
+  padding-bottom: 0px;
 }
 @media (max-width: 395px) {
   .right > .navegacion > .mainav {
@@ -90,17 +126,115 @@ main {
     width: 70px;
     height: 70px;
   }
-  .right {
-    display: flex;
-    flex-direction: column;
-  }
+}
+.branding {
+  display: flex;
+  margin: 4%;
+  flex-wrap: wrap-reverse;
+  justify-content: space-evenly;
+}
+.branding > .textbranding {
+  display: flex;
+  flex-direction: column;
+  margin: 2%;
+  max-width: 500px;
+  font-size: clamp(0.6em, 2.5vw, 4em);
+}
+.branding > .textbranding > h2 {
+  font-size: var(--h2size);
+}
+.branding > .textbranding > p {
+  font-size: var(--psize);
+}
+.branding > img {
+  min-height: 264px;
+  width: 30%;
+  margin: 1%;
+}
+.custom {
+  display: flex;
+  margin: 4%;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.custom > .textcustom {
+  display: flex;
+  flex-direction: column;
+  margin: 2%;
+  max-width: 500px;
+}
+.custom > .textcustom > h2 {
+  font-size: var(--h2size);
+}
+.custom > .textcustom > p {
+  font-size: var(--psize);
+}
+.custom > img {
+  min-height: 264px;
+  width: 30%;
+  margin: 1%;
+}
+.opinions {
+  display: flex;
+  gap: 20px;
+  padding: 10px;
+  flex-wrap: wrap;
+  width: 95%;
+  margin: auto;
+}
+.andrew,
+.vera,
+.mark {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 1;
+  flex-grow: 1;
+  flex-basis: 20%;
+}
+.imgopinions {
+  flex-shrink: 1;
+  flex-grow: 1;
+  width: 95%;
+  margin: auto;
+}
+.opinions p {
+  text-align: justify;
+  font-size: var(--psize);
+  padding: 12%;
 }
 footer {
   display: flex;
-  flex-direction: column;
-  gap: 20px;
+  flex-direction: row;
+  list-style: none;
+  flex-wrap: wrap;
 }
 .footernav {
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
+}
+.navleft,
+.navcenter,
+.navright,
+.navname {
+  flex-basis: 22%;
+}
+.footernav > .nav > h4 {
+  font-size: var(--h2size);
+}
+.footernav > .nav > li > a {
+  font-size: var(--psize);
+  text-decoration: none;
+}
+.footernav > .nav > li {
+  margin: 10px;
+}
+
+.navname > h4 {
+  font-size: var(--h2size);
+}
+.navname > p {
+  font-size: var(--psize);
+  width: 20%;
+  text-align: justify;
 }

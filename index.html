@@ -1,3 +1,4 @@
+<!-- Ejercicio flexbox -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -9,90 +10,174 @@
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <header>
-      <h1>Digital Agency</h1>
-      <p>Agency Landing Page</p>
-    </header>
-    <main>
-      <div class="hero">
-        <div class="left">
-          <p class="title">Digital Agency</p>
-          <p class="maintext">Building Digital Products, Brands & Experience</p>
-          <p class="secondarytext">
-            Digital Agency Is Your Online Team Mangement Tool That Easy And
-            Promt
-          </p>
-          <div class="buttons1">
+    <div class="maincontainer">
+      <header>
+        <h1>Digital Agency</h1>
+        <p>Agency Landing Page</p>
+      </header>
+      <main>
+        <div class="hero">
+          <div class="left">
+            <p class="title">Digital Agency</p>
+            <p class="maintext">
+              Building Digital Products, Brands & Experience
+            </p>
+            <p class="secondarytext">
+              Digital Agency Is Your Online Team Mangement Tool That Easy And
+              Promt
+            </p>
+            <!-- dejar solo el botón de Contact Us -->
+            <!-- <div class="buttons1"> -->
             <button>Contact Us</button>
-            <button>View More</button>
+            <!-- <button>View More</button>
             <button>Share</button>
+          </div> -->
+          </div>
+          <div class="right">
+            <div class="navegacion">
+              <nav class="mainav">
+                <li><a href="home">Home</a></li>
+                <li><a href="about">About</a></li>
+                <li><a href="testimonials">Testimonials</a></li>
+                <li><a href="content">Content</a></li>
+              </nav>
+              <a class="anavegacion" href="#navegacion">
+                <img
+                  class="menu"
+                  src="./ASSETS/images/menu desplegable.png"
+                  alt="desplegable de navegación"
+                />
+              </a>
+            </div>
+
+            <img
+              src="./ASSETS/images/oficina.png"
+              alt="oficina en pleno ajetreo"
+            />
           </div>
         </div>
-        <div class="right">
-          <div class="navegacion">
-            <nav class="mainav">
-              <li><a href="home">Home</a></li>
-              <li><a href="about">About</a></li>
-              <li><a href="testimonials">Testimonials</a></li>
-              <li><a href="content">Content</a></li>
-            </nav>
-            <a class="anavegacion" href="#navegacion">
-              <img
-                class="menu"
-                src="./ASSETS/images/menu desplegable.png"
-                alt="desplegable de navegación"
-              />
-            </a>
+
+        <section class="trusted">
+          <p class="trustext">Trusted by 4000+ Companies</p>
+          <div class="logocontainer">
+            <img
+              class="imglog"
+              src="./ASSETS/images/logos/spotify.png"
+              alt="logo spotify"
+            />
+            <img
+              class="imglog"
+              src="./ASSETS/images/logos/slack.png"
+              alt="logo slack"
+            />
+            <img
+              class="imglog"
+              src="./ASSETS/images/logos/dropbox.png"
+              alt="logo dropbox"
+            />
+            <img
+              class="imglog"
+              src="./ASSETS/images/logos/zoom.png"
+              alt="logo zoom"
+            />
+          </div>
+        </section>
+        <section class="branding">
+          <img src="./ASSETS/images/equipo diseño.png" alt="diseñadores" />
+          <div class="textbranding">
+            <h2>Branding & Design System</h2>
+            <p>
+              Commonly Used In The Graphic, Print & Publishing Industis For
+              Previewing Visual Layout And Mockups
+            </p>
+          </div>
+        </section>
+        <section class="custom">
+          <div class="textcustom">
+            <h2>Custome & Plugin Development</h2>
+            <p>
+              Commonly Used In The Graphic, Print & Publishing Industis For
+              Previewing Visual Layout And Mockups
+            </p>
+          </div>
+          <img
+            src="./ASSETS/images/personalizado.png"
+            alt="desarrollo personalizado"
+          />
+        </section>
+        <section class="opinions">
+          <div class="andrew">
+            <img
+              class="imgopinions"
+              src="./ASSETS/images/andrew.png"
+              alt="primer usuario"
+            />
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. A villa
+              enim, credo, et: Si ibi te esse scissem, ad te ipse venissem. Sin
+              kakan malitiam dixisses, ad aliud nos unum certum vitium
+              consuetudo Latina traduceret.
+            </p>
+          </div>
+          <div class="vera">
+            <img
+              class="imgopinions"
+              src="./ASSETS/images/vera.png"
+              alt="segundo usuario"
+            />
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. A villa
+              enim, credo, et: Si ibi te esse scissem, ad te ipse venissem. Sin
+              kakan malitiam dixisses, ad aliud nos unum certum vitium
+              consuetudo Latina traduceret.
+            </p>
+          </div>
+          <div class="mark">
+            <img
+              class="imgopinions"
+              src="./ASSETS/images/mark.png"
+              alt="tercer usuario"
+            />
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. A villa
+              enim, credo, et: Si ibi te esse scissem, ad te ipse venissem. Sin
+              kakan malitiam dixisses, ad aliud nos unum certum vitium
+              consuetudo Latina traduceret.
+            </p>
+          </div>
+        </section>
+      </main>
+      <footer>
+        <div class="footernav">
+          <div class="navname">
+            <h4>Digital agency</h4>
+            <p>Building Digital Products, Brands & Experience</p>
           </div>
 
-          <img
-            src="./ASSETS/images/oficina.png"
-            alt="oficina en pleno ajetreo"
-          />
+          <nav class="nav navleft">
+            <h4>Resources</h4>
+            <li><a href="guides">Guides</a></li>
+            <li><a href="blog">Blog</a></li>
+            <li><a href="stories">Customer stories</a></li>
+            <li><a href="glosary">Glosary</a></li>
+          </nav>
+          <nav class="nav navcenter">
+            <h4>Company</h4>
+            <li><a href="about">About Us</a></li>
+            <li><a href="careers">Careers</a></li>
+            <li><a href="partners">Partners</a></li>
+            <li><a href="contact">Contact Us</a></li>
+          </nav>
+          <nav class="nav navright">
+            <h4>Social Media</h4>
+            <li><a href="linkedin">Linkedin</a></li>
+            <li><a href="facebook">Facebook</a></li>
+            <li><a href="instagram">Instagram</a></li>
+            <li><a href="twiter">Twiter</a></li>
+          </nav>
         </div>
-      </div>
-      <div class="sections">
-        <section class="firstsection">
-          <p>In this section you can resolve your doubts</p>
-          <div class="faq">
-            Frequently Asked Questions
-            <button class="buttonfaq">FAQ</button>
-          </div>
-        </section>
-        <section class="secondsection">
-          <p>In this section you can see our Products</p>
-          <h4>Product catalog</h4>
-          <div class="buttons2">
-            <button>Catalog</button> <button>Testing</button>
-          </div>
-        </section>
-      </div>
-    </main>
-    <footer>
-      <div class="footernav">
-        <nav class="navleft">
-          <h4>Resources</h4>
-          <li><a href="guides">Guides</a></li>
-          <li><a href="blog">Blog</a></li>
-          <li><a href="stories">Customer stories</a></li>
-          <li><a href="glosary">Glosary</a></li>
-        </nav>
-        <nav class="navcenter">
-          <h4>Company</h4>
-          <li><a href="about">About Us</a></li>
-          <li><a href="careers">Careers</a></li>
-          <li><a href="partners">Partners</a></li>
-          <li><a href="contact">Contact Us</a></li>
-        </nav>
-        <nav class="navright">
-          <h4>Social Media</h4>
-          <li><a href="linkedin">Linkedin</a></li>
-          <li><a href="facebook">Facebook</a></li>
-          <li><a href="instagram">Instagram</a></li>
-          <li><a href="twiter">Twiter</a></li>
-        </nav>
-      </div>
-      © All rights reserved
-    </footer>
+        <p>© All rights reserved</p>
+      </footer>
+    </div>
   </body>
 </html>
